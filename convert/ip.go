@@ -17,3 +17,11 @@ func Ipv4Split(ip string) (string, error) {
 	res = ip[:strings.LastIndex(ip, ".")]
 	return res, nil
 }
+
+// Cut 官方1.18 API 可用作ip:port分离
+func Cut(s, sep string) (before, after string, found bool) {
+	if i := strings.Index(s, sep); i >= 0 {
+		return s[:i], s[i+len(sep):], true
+	}
+	return s, "", false
+}
