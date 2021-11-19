@@ -2,7 +2,7 @@
 
 > 比如delete接口，参数放在url上的
 
-e.g: https://127.0.0.1/delete_something?ids[]=1&ids[]=2
+e.g: https://127.0.0.1/delete_something?ids[]=1&ids[]=2&ids[]=3
 
 伪代码如下
 ```go
