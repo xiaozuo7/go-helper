@@ -17,7 +17,7 @@ func httpGet(url string) (string, error) {
 	return string(body), nil
 }
 
-// NormalCSGet 基础并发请求测试
+// NormalCSGet 基础并发请求
 func NormalCSGet(delta int) {
 	url := "https://suggest.taobao.com/sug?q=VR&code=utf-8"
 
