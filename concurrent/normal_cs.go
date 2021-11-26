@@ -17,13 +17,13 @@ func httpGet(url string) (string, error) {
 	return string(body), nil
 }
 
-// NormalCSGet 基础GET并发请求
-func NormalCSGet(delta int, url string) {
+// NormalCS 基础并发请求
+func NormalCS(delta int, url string) {
 	var wg sync.WaitGroup
 	wg.Add(delta)
 	for i := 0; i < delta; i++ {
 		go func() {
-			// 在这处理业务逻辑，拼装req
+			// 在这处理业务逻辑
 			_, err := httpGet(url)
 			if err != nil {
 				fmt.Println(err)
