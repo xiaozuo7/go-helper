@@ -1,13 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"constraints"
+	"fmt"
+)
 
-type Allow interface {
-	~int | ~int8 | ~int16 | ~int32 | ~int64 | ~string
-}
+//type Allow interface {
+//	~int | ~int8 | ~int16 | ~int32 | ~int64 | ~string
+//}
 
 // Reverse 列表翻转
-func Reverse[T Allow](obj []T) []T {
+func Reverse[T constraints.Ordered](obj []T) []T {
 	n := len(obj)
 
 	for i := 0; i < n/2; i++ {
@@ -19,10 +22,12 @@ func Reverse[T Allow](obj []T) []T {
 }
 
 func main() {
-	a := []string{"I", "am", "sb"}
-	c := []int{1, 2, 3, 4}
-	b := Reverse(a)
-	fmt.Printf("val: %v, type: %T\n", b, b)
-	fmt.Printf("val: %v, type: %T", c, c)
+	tmpA := []string{"I", "am", "sb"}
+	tmpB := []int{1, 2, 3, 4}
+	resA := Reverse(tmpA)
+	resB := Reverse(tmpB)
+
+	fmt.Printf("value: %v, type: %T\n", resA, resA)
+	fmt.Printf("value: %v, type: %T", resB, resB)
 
 }
