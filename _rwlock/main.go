@@ -1,4 +1,4 @@
-package concurrent_exa
+package main
 
 import (
 	"fmt"
@@ -26,7 +26,7 @@ func write() {
 	data++
 }
 
-func RWLockProcess() {
+func main() {
 	start := time.Now()
 	for i := 0; i < 1000; i++ {
 		wg.Add(1)
