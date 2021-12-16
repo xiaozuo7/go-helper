@@ -1,6 +1,6 @@
 package algorithm
 
-// Reverse 列表翻转 等一个泛型
+// Reverse 列表翻转
 func Reverse(obj []string) []string {
 	n := len(obj)
 
