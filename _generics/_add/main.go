@@ -12,7 +12,7 @@ func main() {
 	res1 := Add("1", "2")
 	res2 := Add(1, 2)
 	res3 := Add(1.1, 2.2)
-	//res4 := Add(1, "2")
+	//res4 := Add(1, 2.2)
 
 	fmt.Printf("value: %v, type: %T\n", res1, res1)
 	fmt.Printf("value: %v, type: %T\n", res2, res2)
@@ -22,7 +22,7 @@ func main() {
 	// value: 12,   type: string
 	// value: 3,    type: string
 	// value: 3.30, type: string
-	// default type string of "2" does not match inferred type int for T
+	// default type float64 of 2.2 does not match inferred type int for T
 
 }
 
