@@ -1,12 +1,25 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
+
+func Equal[E comparable](s1, s2 []E) bool {
+	if len(s1) != len(s2) {
+		return false
+	}
+	for i := range s1 {
+		if s1[i] != s2[i] {
+			return false
+		}
+	}
+	return true
+}
 
 func main() {
-	var a, b float64
-	a = 1.1
-	b = 2.2
-	c := a + b
-	fmt.Printf("value: %.2f, type: %T\n", c, c)
+	a := []string{"1", "2"}
+	b := []string{"1", "3"}
 
+	res := Equal(a, b)
+	fmt.Println(res)
 }

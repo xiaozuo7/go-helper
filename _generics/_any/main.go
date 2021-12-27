@@ -1,12 +1,11 @@
 package main
 
 import (
-	"constraints"
 	"fmt"
 )
 
 // Reverse 列表翻转
-func Reverse[T constraints.Ordered](obj []T) []T {
+func Reverse[T any](obj []T) []T {
 	n := len(obj)
 
 	for i := 0; i < n/2; i++ {
