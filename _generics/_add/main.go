@@ -9,15 +9,15 @@ type Allow interface {
 }
 
 func main() {
-	res1 := Add("1", "2")
-	res2 := Add(1, 2)
-	res3 := Add(1.1, 2.2)
-	//res4 := Add(1, 2.2)
+	resString := Add("1", "2")
+	resInt := Add(1, 2)
+	resFloat64 := Add(1.1, 2.2)
+	//resMixed := Add(1, 2.2)
 
-	fmt.Printf("value: %v, type: %T\n", res1, res1)
-	fmt.Printf("value: %v, type: %T\n", res2, res2)
-	fmt.Printf("value: %.2f, type: %T\n", res3, res3)
-	//fmt.Printf("value: %v, type: %T", res4, res4)
+	fmt.Printf("value: %v, type: %T\n", resString, resString)
+	fmt.Printf("value: %v, type: %T\n", resInt, resInt)
+	fmt.Printf("value: %.2f, type: %T\n", resFloat64, resFloat64)
+	//fmt.Printf("value: %v, type: %T", resMixed, resMixed)
 
 	// value: 12,   type: string
 	// value: 3,    type: int
