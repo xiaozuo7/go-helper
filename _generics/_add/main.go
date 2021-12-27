@@ -5,7 +5,7 @@ import (
 )
 
 type Allow interface {
-	~int | ~int8 | ~int16 | ~int32 | ~int64 | ~uint | ~uint8 | ~uint16 | ~uint32 | ~uint64 | ~uintptr | ~float32 | ~float64 | ~string
+	~int | ~float64 | ~string
 }
 
 func main() {
@@ -20,8 +20,8 @@ func main() {
 	//fmt.Printf("value: %v, type: %T", res4, res4)
 
 	// value: 12,   type: string
-	// value: 3,    type: string
-	// value: 3.30, type: string
+	// value: 3,    type: int
+	// value: 3.30, type: float64
 	// default type float64 of 2.2 does not match inferred type int for T
 
 }
