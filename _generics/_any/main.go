@@ -17,7 +17,7 @@ func Reverse[T any](obj []T) []T {
 }
 
 func main() {
-	tmpA := []interface{}{"I", "am", "sb"}
+	tmpA := []string{"I", "am", "sb"}
 	tmpB := []int{1, 2, 3, 4}
 	resA := Reverse(tmpA) // 生成string版本的Reverse
 	resB := Reverse(tmpB) // 生成int版本的Reverse

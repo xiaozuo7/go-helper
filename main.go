@@ -5,7 +5,7 @@ import (
 )
 
 type Allow interface {
-	~int | ~float64 | ~string
+	~int | ~float64 | ~string | ~float32
 }
 
 // Add 泛型版本的Add
