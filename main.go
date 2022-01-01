@@ -4,22 +4,16 @@ import (
 	"fmt"
 )
 
-func Equal[E comparable](s1, s2 []E) bool {
-	if len(s1) != len(s2) {
-		return false
-	}
-	for i := range s1 {
-		if s1[i] != s2[i] {
-			return false
-		}
-	}
-	return true
+func Add(a, b int) int {
+	return a + b
+}
+
+func Add(a, b float64) float64 {
+	return a + b
 }
 
 func main() {
-	a := []string{"1", "2"}
-	b := []string{"1", "3"}
-
-	res := Equal(a, b)
-	fmt.Println(res)
+	res1 := Add(1, 2)
+	res2 := Add(1.1, 2.2)
+	fmt.Println(res1, res2)
 }
