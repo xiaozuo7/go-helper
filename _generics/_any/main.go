@@ -17,12 +17,12 @@ func Reverse[T any](obj []T) []T {
 }
 
 func main() {
-	tmpA := []string{"I", "am", "sb"}
-	tmpB := []int{1, 2, 3, 4}
+	tmpA := []string{"I", "am", "sb"} //生成string版本的Reverse
+	tmpB := []int{1, 2, 3, 4}         // 生成int版本的Reverse
 	resA := Reverse(tmpA)
 	resB := Reverse(tmpB)
 
 	fmt.Printf("value: %v, type: %T\n", resA, resA)
-	fmt.Printf("value: %v, type: %T", resB, resB)
+	fmt.Printf("value: %v, type: %T\n", resB, resB)
 
 }

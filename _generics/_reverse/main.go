@@ -18,8 +18,8 @@ func Reverse[T constraints.Ordered](obj []T) []T {
 }
 
 func main() {
-	tmpA := []string{"I", "am", "sb"}
-	tmpB := []int{1, 2, 3, 4}
+	tmpA := []string{"I", "am", "sb"} // 生成string版本的Reverse
+	tmpB := []int{1, 2, 3, 4}         // 生成int版本的Reverse
 	resA := Reverse(tmpA)
 	resB := Reverse(tmpB)
 
