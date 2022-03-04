@@ -1,4 +1,4 @@
-package convert
+package _convert
 
 import (
 	"bytes"
