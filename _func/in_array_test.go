@@ -4,8 +4,8 @@ import "testing"
 
 func TestInArray(t *testing.T) {
 	type args struct {
-		str string
-		arr []string
+		val interface{}
+		arr interface{}
 	}
 	tests := []struct {
 		name string
@@ -13,25 +13,25 @@ func TestInArray(t *testing.T) {
 		want bool
 	}{
 		{
-			name: "inarray_test",
+			name: "str_in_array_test",
 			args: args{
-				str: "a",
+				val: "a",
 				arr: []string{"a", "b", "c"},
 			},
 			want: true,
 		},
 		{
-			name: "inarray_test",
+			name: "int_in_array_test",
 			args: args{
-				str: "d",
-				arr: []string{"a", "b", "c"},
+				val: 4,
+				arr: []int{1, 2, 3},
 			},
 			want: false,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got, _ := InArray(tt.args.str, tt.args.arr); got != tt.want {
+			if got, _ := InArray(tt.args.val, tt.args.arr); got != tt.want {
 				t.Errorf("InArray() = %v, want %v", got, tt.want)
 			}
 		})
