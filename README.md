@@ -1,8 +1,11 @@
 # go-helper
+
 May be useful for work
 
 + _constants -- 常量声明
 + _convert -- 一些转换
++ _excel -- excel相关
++ _func -- 一些有用的函数
 + _generics -- 泛型例子
 + _pointers -- 指针示例
 + _rwlock -- 读写锁
