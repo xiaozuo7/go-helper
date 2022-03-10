@@ -5,7 +5,6 @@ May be useful for work
 + _excel -- excel相关
 + _func -- 一些有用的函数
 + _generics -- 泛型例子
-+ _pointers -- 指针示例
 + _rwlock -- 读写锁
 + _tcp_scanner -- TCP端口扫描器
 + _testing -- 标准单元测试
