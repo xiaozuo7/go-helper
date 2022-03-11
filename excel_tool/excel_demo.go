@@ -1,16 +1,14 @@
-package main
+package excel_tool
 
 import (
 	"fmt"
-
 	"github.com/xuri/excelize/v2"
 )
 
-func main() {
+func DemoExcel() error {
 	f, err := excelize.OpenFile("aaa.xlsx")
 	if err != nil {
-		fmt.Println(err)
-		return
+		return err
 	}
 	defer func() {
 		// Close the spreadsheet.
@@ -22,9 +20,9 @@ func main() {
 	cell, err := f.GetCellValue("Sheet1", "B2", excelize.Options{RawCellValue: true})
 
 	if err != nil {
-		fmt.Println(err)
-		return
+		return err
 	}
 	fmt.Println(cell)
+	return nil
 
 }
