@@ -5,7 +5,7 @@ import (
 	"github.com/xuri/excelize/v2"
 )
 
-func DemoExcel() error {
+func ReadExcel() error {
 	f, err := excelize.OpenFile("aaa.xlsx")
 	if err != nil {
 		return err
@@ -25,4 +25,17 @@ func DemoExcel() error {
 	fmt.Println(cell)
 	return nil
 
+}
+
+func WriteExcel() error {
+	f := excelize.NewFile()
+	// Set value of a cell.
+	_ = f.SetCellValue("Sheet1", "A2", "Hello world.")
+	// Set active sheet of the workbook.
+	f.SetActiveSheet(1)
+	// Save xlsx file by the given path.
+	if err := f.SaveAs("test.xlsx"); err != nil {
+		return err
+	}
+	return nil
 }
