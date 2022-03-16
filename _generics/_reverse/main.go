@@ -17,6 +17,7 @@ func Reverse[T constraints.Ordered](obj []T) []T {
 	return obj
 }
 
+// 可以通过 go tool compile -S main.go > main.s 查看汇编代码
 func main() {
 	tmpA := []string{"I", "am", "sb"} // 生成string版本的Reverse
 	tmpB := []int{1, 2, 3, 4}         // 生成int版本的Reverse
