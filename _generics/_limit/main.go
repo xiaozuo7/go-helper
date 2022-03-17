@@ -6,7 +6,7 @@ func main() {
 }
 
 // Stringify 调用泛型类型值上的任何方法
-func Stringify[T any](s []T) (ret []string) {
+func Stringify[T any](s []T) (ret []T) {
 	for _, v := range s {
 		ret = append(ret, v.String()) // C++可以，但是Go不行
 	}
