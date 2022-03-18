@@ -6,7 +6,7 @@ May be useful for work
 + _generics -- 泛型例子
 + _rwlock -- 读写锁
 + _tcp_scanner -- TCP端口扫描器
-+ _testing -- 标准单元测试
++ testing -- 标准单元测试
 + constant -- 全局常量
 + convert -- 一些转换函数
 + logger -- zap日志封装
