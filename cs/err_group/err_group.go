@@ -7,7 +7,7 @@ import (
 	"time"
 )
 
-// ErrGroupDemo is a demo of errgroup package, attention no panic!
+// ErrGroupDemo is a demo of errgroup package, note that there is no panic handling in errgroup.
 func ErrGroupDemo() error {
 	var g errgroup.Group
 
