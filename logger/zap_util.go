@@ -2,28 +2,20 @@ package logger
 
 import (
 	"github.com/natefinch/lumberjack"
-	"go-helper/constant"
+	"go-helper/constant/consts"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"time"
 )
-
-var (
-	Logger *zap.Logger
-)
-
-func init() {
-	Logger = CreateZapUtil(ZapLogHandler)
-}
 
 func CreateZapUtil(entry func(zapcore.Entry) error) *zap.Logger {
 
 	encoderConfig := zap.NewProductionEncoderConfig()
 
 	encoderConfig.EncodeTime = func(t time.Time, enc zapcore.PrimitiveArrayEncoder) {
-		enc.AppendString(t.Format(constant.TimeLayout))
+		enc.AppendString(t.Format(consts.TimeLayout))
 	}
-	encoderConfig.EncodeLevel = zapcore.CapitalColorLevelEncoder
+	encoderConfig.EncodeLevel = zapcore.CapitalLevelEncoder
 
 	var encoder zapcore.Encoder
 	encoder = zapcore.NewConsoleEncoder(encoderConfig) // 日志格式
