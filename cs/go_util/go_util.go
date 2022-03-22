@@ -1,7 +1,7 @@
 package go_util
 
 import (
-	"go-helper/constant/variable"
+	"go-helper/global/variable"
 	"go.uber.org/zap"
 	"runtime"
 )
