@@ -16,12 +16,12 @@ May be useful for work
 │   ├── ip.go           // ip相关处理
 ├── cs                  // go并发
 │   ├── err_group       // errgroup
-│   ├── factorial       // 幂等函数
+│   ├── factorial       // demo_计算阶乘
 │   ├── go_util         // 封装了recover的go协程
 │   ├── pipline         // 管道并发
 │   └── semaphore       // 信号量
 ├── excel_tool          // excel相关
-├── func_tool           // 数据转换
+├── func_tool           // 通用函数
 ├── global
 │   ├── consts          // 全局常量
 │   ├── my_errors       // 全局错误
