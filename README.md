@@ -11,7 +11,7 @@ May be useful for work
 │   ├── README.go       // 快速了解泛型
 ├── _rwlocak            // 读写锁
 ├── _tcp_scanner        // tcp端口扫描器
-├── convert             // 转换函数
+├── convert             // 转换相关
 │   ├── big_number.go   // json精度问题
 │   ├── ip.go           // ip相关处理
 ├── cs                  // go并发
