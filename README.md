@@ -15,6 +15,7 @@ May be useful for work
 │   ├── big_number.go   // json精度问题
 │   ├── ip.go           // ip相关处理
 ├── cs                  // go并发
+│   ├── chan_demo       // chan http并发demo
 │   ├── err_group       // errgroup
 │   ├── factorial       // demo_计算阶乘
 │   ├── go_util         // 封装了recover的go协程
