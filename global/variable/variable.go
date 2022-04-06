@@ -1,7 +1,7 @@
 package variable
 
 import (
-	"go-helper/constant/my_errors"
+	"go-helper/global/my_errors"
 	"go.uber.org/zap"
 	"log"
 	"os"
