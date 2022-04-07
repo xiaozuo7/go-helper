@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"go-helper/constant/variable"
 	"go-helper/cs/go_util"
+	"go-helper/global/variables"
 	"go-helper/logger"
 	"time"
 )
@@ -18,10 +18,10 @@ func main() {
 		panic("panic")
 	})
 	time.Sleep(time.Second * 5)
-	variable.ZapLog.Info("zap log info")
+	variables.ZapLog.Info("zap log info")
 	fmt.Println("main end")
 }
 
 func init() {
-	variable.ZapLog = logger.CreateZapUtil(logger.ZapLogHandler)
+	variables.ZapLog = logger.CreateZapUtil(logger.ZapLogHandler)
 }

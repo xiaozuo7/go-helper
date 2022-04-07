@@ -1,4 +1,4 @@
-package variable
+package variables
 
 import (
 	"go-helper/global/my_errors"

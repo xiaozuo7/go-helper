@@ -1,7 +1,6 @@
 package go_util
 
 import (
-	"go-helper/global/variable"
 	"go.uber.org/zap"
 	"runtime"
 )
@@ -13,7 +12,7 @@ func Go(f func()) {
 			if err := recover(); err != nil {
 				buf := make([]byte, 64<<10)
 				buf = buf[:runtime.Stack(buf, false)]
-				variable.ZapLog.Error("go routine panic", zap.Any("err", err), zap.String("stack", string(buf)))
+				variables.ZapLog.Error("go routine panic", zap.Any("err", err), zap.String("stack", string(buf)))
 			}
 		}()
 		f()
