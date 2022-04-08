@@ -2,7 +2,7 @@ package logger
 
 import (
 	"github.com/natefinch/lumberjack"
-	"go-helper/constant/consts"
+	"go-helper/global/consts"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"time"
