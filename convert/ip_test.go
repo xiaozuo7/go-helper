@@ -24,3 +24,18 @@ func TestCut(t *testing.T) {
 	}
 	t.Logf("ip:%v, port:%v", ip, port)
 }
+
+func TestParseIpAndPort(t *testing.T) {
+	testData := []string{"1.1.1.1:80", "2002:6301:2212::6301:2212.0"}
+	wants := []string{"1.1.1.1", "80", "2002:6301:2212::6301:2212", "0"}
+	var res []string
+	for _, data := range testData {
+		ip, port := ParseIpAndPort(data)
+		res = append(res, ip, port)
+	}
+	for i, want := range wants {
+		if res[i] != want {
+			t.Errorf("want:%v, get:%v", want, res[i])
+		}
+	}
+}

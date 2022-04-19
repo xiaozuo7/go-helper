@@ -25,3 +25,20 @@ func Cut(s, sep string) (before, after string, found bool) {
 	}
 	return s, "", false
 }
+
+// ParseIpAndPort 解析ip地址及端口 127.0.0.1:80  2002:6301:2212::6301:2212.0 --> ip port
+func ParseIpAndPort(s string) (string, string) {
+	for i := 0; i < len(s); i++ {
+		switch s[i] {
+		case '.':
+			if n := strings.LastIndex(s, ":"); n != -1 {
+				return s[:n], s[n+1:]
+			}
+		case ':':
+			if n := strings.LastIndex(s, "."); n != -1 {
+				return s[:n], s[n+1:]
+			}
+		}
+	}
+	return "", ""
+}
