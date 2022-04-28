@@ -9,3 +9,6 @@ const (
 )
 
 const TimeLayout = "2006-01-02 15:04:05"
+
+// NameRegexp 中文、字母、数字、下划线、短横线、点号、冒号的任意组合
+const NameRegexp string = "^[a-zA-Z0-9_\\-:.\u4E00-\u9FA5\uF900-\uFA2D]+$"
