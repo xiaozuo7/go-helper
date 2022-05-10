@@ -23,7 +23,7 @@ May be useful for work
 │   └── semaphore       // 信号量
 ├── excel_tool          // excel相关
 ├── func_tool           // 通用函数
-├── global
+├── global              // 全局定义
 │   ├── consts          // 全局常量
 │   ├── my_errors       // 全局错误
 │   └── variable        // 全局变量
