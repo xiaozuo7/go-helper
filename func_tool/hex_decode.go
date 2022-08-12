@@ -1,8 +1,15 @@
 package func_tool
 
-import "encoding/hex"
+import (
+	"encoding/hex"
+	"strings"
+)
 
 func HexDecode(s string) string {
-	b, _ := hex.DecodeString(s)
-	return string(b)
+	if strings.Index(s, "\\x") != -1 {
+		hexadecimal := strings.ReplaceAll(s, "\\x", "")
+		b, _ := hex.DecodeString(hexadecimal)
+		return string(b)
+	}
+	return s
 }
