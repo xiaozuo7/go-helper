@@ -11,8 +11,8 @@ func TestAes(t *testing.T) {
 
 	orig := "this@is./password"
 	t.Log("原文：", orig)
-	encryptCode := AesEncrypt(orig, key)
+	encryptCode := EncryptAES(orig, key)
 	t.Log("密文：", encryptCode)
-	decryptCode := AesDecrypt(encryptCode, key)
+	decryptCode := DecryptAES(encryptCode, key)
 	t.Log("解密结果：", decryptCode)
 }
