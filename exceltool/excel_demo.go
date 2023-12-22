@@ -1,4 +1,4 @@
-package excel_tool
+package exceltool
 
 import (
 	"fmt"

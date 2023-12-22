@@ -1,4 +1,4 @@
-package func_tool
+package functool
 
 import "regexp"
 
