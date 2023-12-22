@@ -2,10 +2,9 @@
 
 May be useful for work
 
-
 ## 目录
 
-```
+```json
 ├── _generics
 │   ├── demo            // 泛型例子
 │   ├── README.go       // 快速了解泛型
