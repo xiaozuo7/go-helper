@@ -1,14 +1,15 @@
 package logger
 
 import (
-	"github.com/natefinch/lumberjack"
 	"go-helper/global/consts"
+	"time"
+
+	"github.com/natefinch/lumberjack"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
-	"time"
 )
 
-func CreateZapUtil(entry func(zapcore.Entry) error) *zap.Logger {
+func CreateZapUtil(entry func(zapcore.Entry) error) *zap.SugaredLogger {
 
 	encoderConfig := zap.NewProductionEncoderConfig()
 
@@ -29,8 +30,8 @@ func CreateZapUtil(entry func(zapcore.Entry) error) *zap.Logger {
 		Compress:   false,     //是否压缩/归档旧文件
 	}
 	writer := zapcore.AddSync(lumberJackLogger)
-	zapCore := zapcore.NewCore(encoder, writer, zap.InfoLevel)                                   // 日志级别
-	return zap.New(zapCore, zap.AddCaller(), zap.Hooks(entry), zap.AddStacktrace(zap.WarnLevel)) // 抛出堆栈级别
+	zapCore := zapcore.NewCore(encoder, writer, zap.InfoLevel)                                           // 日志级别
+	return zap.New(zapCore, zap.AddCaller(), zap.Hooks(entry), zap.AddStacktrace(zap.WarnLevel)).Sugar() // 抛出堆栈级别
 }
 
 func ZapLogHandler(entry zapcore.Entry) error {
