@@ -3,10 +3,11 @@ package chan_demo
 import (
 	"crypto/tls"
 	"fmt"
-	"github.com/go-resty/resty/v2"
-	"go-helper/cs/go_util"
+	"go-helper/cs/goutil"
 	"sync"
 	"time"
+
+	"github.com/go-resty/resty/v2"
 )
 
 type BaseHandler struct {
@@ -40,7 +41,7 @@ func (c *BaseHandler) CSHttp(inputs []string) (map[string]string, error) {
 	for i := 0; i < works; i++ {
 		wg.Add(1)
 		// 启动协程 注意对panic的处理，可自行封装
-		go_util.Go(func() {
+		goutil.Go(func() {
 			defer wg.Done()
 			for {
 				task, ok := <-tasks

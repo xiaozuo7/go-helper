@@ -1,9 +1,10 @@
-package go_util
+package goutil
 
 import (
 	"go-helper/global/variables"
-	"go.uber.org/zap"
 	"runtime"
+
+	"go.uber.org/zap"
 )
 
 // Go go协程加入panic逻辑

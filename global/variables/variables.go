@@ -1,11 +1,12 @@
 package variables
 
 import (
-	"go-helper/global/my_errors"
-	"go.uber.org/zap"
+	"go-helper/global/myerrors"
 	"log"
 	"os"
 	"strings"
+
+	"go.uber.org/zap"
 )
 
 var ZapLog *zap.Logger
@@ -22,6 +23,6 @@ func init() {
 			BasePath = curPath
 		}
 	} else {
-		log.Fatal(my_errors.ErrorsBasePath)
+		log.Fatal(myerrors.ErrorsBasePath)
 	}
 }

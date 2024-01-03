@@ -15,20 +15,22 @@ May be useful for work
 │   ├── big_number.go   // json精度问题
 │   ├── ip.go           // ip相关处理
 ├── cs                  // go并发
-│   ├── chandemo       // chan http并发demo
-│   ├── errgroup       // errgroup
+│   ├── chandemo        // chan http并发demo
+│   ├── errgroup        // errgroup
 │   ├── factorial       // demo_计算阶乘
-│   ├── goutil         // 封装了recover的go协程
+│   ├── goutil          // 封装了recover的go协程
 │   ├── pipline         // 管道并发
 │   └── semaphore       // 信号量
-├── exceltool          // excel相关
-├── functool           // 通用函数
+├── exceltool           // excel相关
+├── functool            // 通用函数
 ├── global              // 全局定义
 │   ├── consts          // 全局常量
-│   ├── myerrors       // 全局错误
+│   ├── myerrors        // 全局错误
 │   └── variable        // 全局变量
 ├── logger              // zap日志封装
 ├── mistakes            // 易错点
 ├── testing             // 标准单元测试
-└── urltrans           // url递归拼接
+├── testing             // rl递归拼接
+└── xorbase64           // 异或加密算法
+
 ```
